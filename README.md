@@ -1,2 +1,2 @@
-# Cevicher-a---Garpis
+# Cevicheria---Garpis
 Restaurant de Mariscos
