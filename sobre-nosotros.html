@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre Nosotros - Garpis</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: url('https://images.unsplash.com/photo-1528605248644-14dd04022da1') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    .sobre-container {
+      max-width: 1000px;
+      margin: 80px auto;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #6b3e26;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .historia {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+      margin-bottom: 30px;
+    }
+
+    .imagen-local {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .imagen-local img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .valores {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .valor {
+      background: #f9f3ef;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 250px;
+      text-align: center;
+    }
+
+    .valor h3 {
+      color: #a67c52;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .valores {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sobre-container">
+    <h1>Sobre Nosotros</h1>
+
+    <div class="historia">
+      <p>En <strong>Garpis</strong>, la pasión por la buena comida se une con la tradición y la innovación. Desde nuestros inicios en el corazón de Lima, hemos buscado ofrecer una experiencia gastronómica única, donde cada plato cuenta una historia y cada cliente se convierte en parte de nuestra familia.</p>
+
+      <p>Nuestro restaurante fue fundado por amantes de la cocina peruana e internacional, con la visión de crear un espacio donde la calidad, el ambiente y el servicio se sientan en cada rincón. Hoy, Garpis es reconocido por su creatividad culinaria, su atención al detalle y su amor por los ingredientes frescos y locales.</p>
+    </div>
+
+    <div class="imagen-local">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Restaurante Garpis">
+    </div>
+
+    <div class="valores">
+      <div class="valor">
+        <h3>🍽 Calidad</h3>
+        <p>Seleccionamos solo los mejores ingredientes y cuidamos cada detalle en nuestros platos.</p>
+      </div>
+      <div class="valor">
+        <h3>🤝 Hospitalidad</h3>
+        <p>Tratamos a cada cliente como en casa, con calidez y atención personalizada.</p>
+      </div>
+      <div class="valor">
+        <h3>🌿 Tradición & Innovación</h3>
+        <p>Combinamos recetas tradicionales con toques modernos para sorprenderte.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

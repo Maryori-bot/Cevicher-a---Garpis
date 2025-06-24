@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Garpis - Restaurante</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fffdf9;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #d8134e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+    }
+
+    .navbar nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 10px;
+    }
+
+    .navbar nav a:hover {
+      background-color: #d8134e;
+      border-radius: 5px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .navbar nav {
+        display: none;
+        flex-direction: column;
+        background-color: #d8134e;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .navbar nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    .bienvenida {
+      display: flex;
+      justify-content: center;
+      padding: 30px 10px;
+      background-color: #f1e9e6;
+    }
+
+    .contenido-bienvenida {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 900px;
+    }
+
+    .contenido-bienvenida .texto {
+      text-align: center;
+      flex: 1;
+    }
+
+    .contenido-bienvenida h1 {
+      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
+
+    .contenido-bienvenida .imagen {
+      flex: 1;
+      max-width: 350px;
+    }
+
+    .contenido-bienvenida .imagen img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    section {
+      padding: 40px 20px 60px;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .platillos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .plato {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .plato img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .plato h3 {
+      margin: 15px 0 10px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    footer {
+      background-color: #d8134e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .iconos {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    .iconos i {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .iconos i:hover {
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú superior fijo -->
+  <div class="navbar">
+    <div class="logo">Garpis</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="nav">
+      <a href="index.html">Inicio</a>
+      <a href="carta.html">Carta</a>
+      <a href="reservas.html">Reservas</a>
+      <a href="contactame.html">Contacto</a>
+      <a href="sobre-nosotros.html">Sobre Nosotros</a>
+    </nav>
+  </div>
+
+  <!-- Bienvenida con imagen al costado -->
+  <div class="bienvenida">
+    <div class="contenido-bienvenida">
+      <div class="texto">
+        <h1>Bienvenido a Cevicheria Garpis</h1>
+        <p>"El Sabor en su Punto"</p>
+      </div>
+      <div class="imagen">
+        <img src="maryo.jpeg" alt="Restaurante elegante">
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de platillos -->
+  <section>
+    <h2>Platos Recomendados</h2>
+    <div class="platillos">
+      <div class="plato">
+        <img src="garpis1.jpg">
+        <h3>Ceviche Mixto</h3>
+        <p>Pescado y mariscos frescos con limón, ají y cebolla morada.</p>
+      </div>
+      <div class="plato">
+        <img src="garpis2.jpg">
+        <h3>Jalea Garpis</h3>
+        <p>Pescado entero amarinado acompañado de chicharron, yucas fritas,sarza en aji amarillo, cremas y guarniciones</p>
+      </div>
+      <div class="plato">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Ají de Gallina">
+        <h3>Ají de Gallina</h3>
+        <p>Crema suave de ají amarillo sobre papas y arroz.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Garpis - Todos los derechos reservados.</p>
+    <div class="iconos">
+      <i class="fab fa-facebook-square"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-whatsapp"></i>
+    </div>
+  </footer>
+
+  <!-- JS para menú móvil -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

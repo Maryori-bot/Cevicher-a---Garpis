@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carta - Garpis</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: url('https://images.unsplash.com/photo-1541544181065-09c54e8b35c3') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin: 0;
+      color: #f5d742;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      flex-wrap: wrap;
+    }
+
+    .columna {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+    }
+
+    .categoria {
+      margin-bottom: 40px;
+    }
+
+    .categoria h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #f5d742;
+      border-bottom: 2px solid #f5d742;
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      background-color: rgba(255,255,255,0.05);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .info h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .info p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+      color: #ddd;
+    }
+
+    .precio {
+      font-weight: bold;
+      color: #f5d742;
+    }
+
+    @media (max-width: 800px) {
+      .menu {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Carta de Garpis</h1>
+  </header>
+
+  <section class="menu">
+    <!-- Columna Izquierda -->
+    <div class="columna">
+      <div class="categoria">
+        <h2>Entradas</h2>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1604908812636-facb9af0c59c" alt="Bruschetta">
+          <div class="info">
+            <h3>Bruschetta</h3>
+            <p>Pan con tomate cherry y albahaca fresca.</p>
+            <span class="precio">S/ 18.00</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90" alt="Ensalada">
+          <div class="info">
+            <h3>Ensalada Garpis</h3>
+            <p>Hojas verdes con queso de cabra y nueces.</p>
+            <span class="precio">S/ 22.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h2>Platos Principales</h2>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1604908177522-402a9b61b85f" alt="Risotto">
+          <div class="info">
+            <h3>Risotto de mariscos</h3>
+            <p>Camarones, calamares y mejillones.</p>
+            <span class="precio">S/ 38.00</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1598514982846-7d5dc6316b9b" alt="Filete">
+          <div class="info">
+            <h3>Filete Garpis</h3>
+            <p>Corte de res con puré trufado y vegetales.</p>
+            <span class="precio">S/ 55.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna Derecha -->
+    <div class="columna">
+      <div class="categoria">
+        <h2>Postres</h2>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Tarta">
+          <div class="info">
+            <h3>Tarta de chocolate</h3>
+            <p>Bizcocho con ganache de chocolate belga.</p>
+            <span class="precio">S/ 16.00</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Cheesecake">
+          <div class="info">
+            <h3>Cheesecake de maracuyá</h3>
+            <p>Pastel de queso con salsa tropical.</p>
+            <span class="precio">S/ 18.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h2>Bebidas</h2>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1615476029752-3f8d020d1844" alt="Limonada">
+          <div class="info">
+            <h3>Limonada de hierbabuena</h3>
+            <p>Refrescante, natural y helada.</p>
+            <span class="precio">S/ 10.00</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1602777928240-1810b0e9812b" alt="Cóctel">
+          <div class="info">
+            <h3>Cóctel Garpis</h3>
+            <p>Frutas de estación y toque secreto.</p>
+            <span class="precio">S/ 18.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
